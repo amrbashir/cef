@@ -271,8 +271,7 @@ int RunMain(HINSTANCE hInstance,
   auto window_config = std::make_unique<RootWindowConfig>();
   window_config->always_on_top =
       command_line->HasSwitch(switches::kAlwaysOnTop);
-  window_config->with_osr =
-      settings.windowless_rendering_enabled ? true : false;
+  window_config->with_osr = settings.windowless_rendering_enabled ? true : false;
 
   // Create the first window.
   context->GetRootWindowManager()->CreateRootWindow(std::move(window_config));
